@@ -812,27 +812,27 @@ section {
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
-.call-to-action .container {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") center center;
-  background-size: cover;
-  padding: 100px 60px;
-  border-radius: 15px;
-  overflow: hidden;
-}
+  /* .call-to-action .container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") center center;
+    background-size: cover;
+    padding: 100px 60px;
+    border-radius: 15px;
+    overflow: hidden;
+  } */
 
-.call-to-action h3 {
+/* .call-to-action h3 {
   color: #fff;
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
-}
+} */
 
-.call-to-action p {
+/* .call-to-action p {
   color: #fff;
   margin-bottom: 20px;
-}
+} */
 
-.call-to-action .play-btn {
+/* .call-to-action .play-btn {
   width: 94px;
   height: 94px;
   margin-bottom: 20px;
@@ -841,9 +841,9 @@ section {
   display: inline-block;
   position: relative;
   overflow: hidden;
-}
+} */
 
-.call-to-action .play-btn:before {
+/* .call-to-action .play-btn:before {
   content: "";
   position: absolute;
   width: 120px;
@@ -859,9 +859,9 @@ section {
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
-}
+} */
 
-.call-to-action .play-btn:after {
+/* .call-to-action .play-btn:after {
   content: "";
   position: absolute;
   left: 50%;
@@ -874,9 +874,9 @@ section {
   border-left: 15px solid #fff;
   z-index: 100;
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
+} */
 
-.call-to-action .play-btn:hover:before {
+/* .call-to-action .play-btn:hover:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -891,14 +891,14 @@ section {
   z-index: 200;
   animation: none;
   border-radius: 0;
-}
+} */
 
-.call-to-action .play-btn:hover:after {
+/* .call-to-action .play-btn:hover:after {
   border-left: 15px solid var(--color-primary);
   transform: scale(20);
-}
+} */
 
-.call-to-action .cta-btn {
+/* .call-to-action .cta-btn {
   font-family: var(--font-primary);
   font-weight: 500;
   font-size: 16px;
@@ -910,12 +910,12 @@ section {
   margin: 10px;
   border: 2px solid #fff;
   color: #fff;
-}
+} */
 
-.call-to-action .cta-btn:hover {
+/* .call-to-action .cta-btn:hover {
   background: var(--color-primary);
   border: 2px solid var(--color-primary);
-}
+} */
 
 @keyframes pulsate-btn {
   0% {
