@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SahayakSetu Real-Time Tracking System</title>
+</head>
+<body style="background-color: #008374;">
+
+    <nav style="display: flex; flex-direction: row; align-items: center; justify-content: centers; margin-top: -20px;">
+        <div style="display: flex; flex-direction: row; align-items: center; margin-top: -20px;">
+            <img src="assets/img/coml2.png" alt="reload" style="max-height: 180px; margin-right: 10px"/>
+            <h1><span style="color: white; margin: -50px; font-size: 2.2rem;">SahayakSetu</span></h1>
+          </div>
+
+          <div class="dropdown" style="margin: auto; justify-content: center; display: flex; flex-direction: column;">
+            <h1 style="color: white;">Select The Type Of Diasater</h1>
+            <select id="fruit" name="fruit" style="width: 200px; height: 40px; border-radius: 20px; font-size: large; align-items: center;justify-content: center; padding: auto; margin: auto;">
+                <option disabled selected value="" style="text-align: center;">Select</option>
+                <option value="apple" style="text-align: center;">Earthquake</option>
+                <option value="banana" style="text-align: center;">Flood</option>
+                <option value="cherry" style="text-align: center;">Storm</option>
+                <option value="Land Slide"style="text-align: center;" >Land Slide</option>
+            </select>
+
+
+          </div>
+
+          <button style="width: 7rem; height: 3rem; border-radius: 15px; font-size: large; font-weight: 600; background: rgba(247, 5, 5, 0.916);;">Send</button>
+    </nav>
+   
+    <div id="map" style="width: 100%; height: 1000px; max-width: 80%; margin: auto; max-height: 500px; margin-top:0; border: 2px solid black;"></div>
+
+    <script>
+        // Function to initialize the map
+        function initMap() {
+            // Create a map centered at a default location
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 0, lng: 0 },
+                zoom: 17,
+            });
+
+            // Initialize a Geolocation object
+            const geolocation = navigator.geolocation;
+
+            // Check if geolocation is available
+            if (geolocation) {
+                // Watch the user's position and update the map in real-time
+                const watchId = geolocation.watchPosition((position) => {
+                    const userLocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    };
+
+                    // Update the map's center and add a marker at the user's location
+                    map.setCenter(userLocation);
+                    const marker = new google.maps.Marker({
+                        position: userLocation,
+                        map: map,
+                        title: "User Location",
+                    });
+                });
+
+                // Handle errors
+                geolocation.onerror = (error) => {
+                    console.error("Error getting user location:", error.message);
+                };
+            } else {
+                console.error("Geolocation is not available in this browser.");
+            }
+        }
+    </script>
+
+    <!-- Include the Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEs5u91kTZNgtwWt4_nwlBqIrxrrVmYK4&callback=initMap" async defer>
+        </script>
+    
+</body>
+</html>
+
+
